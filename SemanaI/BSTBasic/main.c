@@ -34,8 +34,6 @@ int main() {
                     system("PAUSE");
                 }
                 break;
-            case 3:
-                exit(1);
             default:
                 printf("Invalid option!");
                 system("PAUSE");
