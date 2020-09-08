@@ -23,16 +23,26 @@ int main() {
                 break;
             case 2:
                 printf("SELECT OPTION FOR VIEW INFORMATION:\n");
-                printf("1 - Pre-order\n2 - Post-order\n3 - In order\n");
+                printf("1 - Pre-order\n2 - Post-order\n3 - In order\n0 - Exit\n");
                 printf("Enter option: ");
                 scanf("%d", &optionView);
-                if (optionView == 1 || optionView == 2 || optionView == 3) {
-                    order(rootNode, optionView);
-                    printf("\n");
-                } else {
-                    printf("Invalid option!\n");
-                    system("PAUSE");
+                switch (optionView) {
+                    case 0:
+                        exit(1);
+                    case 1:
+                        preOrder(rootNode);
+                        break;
+                    case 2:
+                        postOrder(rootNode);
+                        break;
+                    case 3:
+                        order(rootNode);
+                        break;
+                    default:
+                        printf("Invalid option!\n");
+                        system("PAUSE");
                 }
+                printf("\n");
                 break;
             default:
                 printf("Invalid option!");
