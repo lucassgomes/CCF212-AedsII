@@ -32,13 +32,13 @@ void order(pointerType rootPointer) {
 void preOrder(pointerType rootPointer) {
     if (rootPointer == NULL) return;
     printf("%d ", rootPointer->information);
-    order(rootPointer->left);
+    preOrder(rootPointer->left);
     order(rootPointer->right);
 }
 
 void postOrder(pointerType rootPointer) {
     if (rootPointer == NULL) return;
-    order(rootPointer->left);
-    order(rootPointer->right);
+    postOrder(rootPointer->left);
+    postOrder(rootPointer->right);
     printf("%d ", rootPointer->information);
 }
